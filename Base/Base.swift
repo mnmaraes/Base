@@ -20,10 +20,12 @@ infix operator ~- { associativity left precedence 120 }
 
 //Composition Operator
 infix operator • { associativity left precedence 140 }
-
+//
 //Application Operators
 infix operator <| { associativity right precedence 70 }
 //infix operator |> { associativity left precedence 70 }
+
+infix operator >? { associativity right precedence 70 }
 
 infix operator <? { associativity right precedence 70 }
 infix operator <?? { associativity right precedence 70 }
@@ -138,6 +140,31 @@ public func curry<A,B,C,D,E,F,G,H,I,J>(function:(A, B, C, D, E, F, G, H, I) -> J
     }
 }
 
+public func curry<A,B,C,D,E,F,G,H,I,J,K>(function:(A, B, C, D, E, F, G, H, I, J) -> K)
+    -> A -> B -> C -> D -> E -> F -> G -> H -> I -> J -> K {
+        return { a in
+            { b in
+                { c in
+                    { d in
+                        { e in
+                            { f in
+                                { g in
+                                    { h in
+                                        { i in
+                                            { j in
+                                                function(a, b, c, d, e, f, g, h, i, j)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}
+
 public func curry<A,B,C,D,E,F,G,H,I,J,K,L,M>(
     function:(A, B, C, D, E, F, G, H, I, J, K, L) -> M)
     -> A -> B -> C -> D -> E -> F -> G -> H -> I -> J -> K -> L -> M{
@@ -167,6 +194,39 @@ public func curry<A,B,C,D,E,F,G,H,I,J,K,L,M>(
             }
         }
     }
+}
+
+public func curry<A,B,C,D,E,F,G,H,I,J,K,L,M,N>(
+    function:(A, B, C, D, E, F, G, H, I, J, K, L, M) -> N)
+    -> A -> B -> C -> D -> E -> F -> G -> H -> I -> J -> K -> L -> M -> N{
+        return { a in
+            { b in
+                { c in
+                    { d in
+                        { e in
+                            { f in
+                                { g in
+                                    { h in
+                                        { i in
+                                            { j in
+                                                { k in
+                                                    { l in
+                                                        { m in
+                                                            function(a, b, c, d, e, f,
+                                                                g, h, i, j, k, l, m)
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 }
 
 //MARK: Uncurry Functions
@@ -304,6 +364,10 @@ public func -<<A, B> (f: A -> B, x: A) -> B {
 
 public func -<<A, B> (f: [A -> B], x: A) -> [B] {
     return apply(f, x)
+}
+
+public func >? <A,B> (x: A?, f: (A -> B)?) -> B? {
+    return optionalApply(f, x)
 }
 
 public func <? <A,B> (f: (A -> B)?, x: A?) -> B? {

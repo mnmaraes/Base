@@ -11,6 +11,7 @@
 		EB81B9FA1B30BB6900DAFFA9 /* Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB81B9EE1B30BB6900DAFFA9 /* Base.framework */; };
 		EB81BA011B30BB6900DAFFA9 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB81BA001B30BB6900DAFFA9 /* BaseTests.swift */; };
 		EB81BA241B30BC8500DAFFA9 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB81BA231B30BC8500DAFFA9 /* Base.swift */; };
+		EBDAA0E21B470D8800756678 /* Foudation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAA0E11B470D8800756678 /* Foudation+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		EB81B9FF1B30BB6900DAFFA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB81BA001B30BB6900DAFFA9 /* BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
 		EB81BA231B30BC8500DAFFA9 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		EBDAA0E11B470D8800756678 /* Foudation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foudation+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				EB81BA231B30BC8500DAFFA9 /* Base.swift */,
 				EB81B9F31B30BB6900DAFFA9 /* Base.h */,
 				EB81B9F11B30BB6900DAFFA9 /* Supporting Files */,
+				EBDAA0E11B470D8800756678 /* Foudation+Extension.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB81BA241B30BC8500DAFFA9 /* Base.swift in Sources */,
+				EBDAA0E21B470D8800756678 /* Foudation+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +407,7 @@
 				EB81BA061B30BB6900DAFFA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB81BA071B30BB6900DAFFA9 /* Build configuration list for PBXNativeTarget "BaseTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +416,7 @@
 				EB81BA091B30BB6900DAFFA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
